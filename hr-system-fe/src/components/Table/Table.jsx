@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import ReadOnlyRow from "./Row/ReadOnlyRow";
 import EditableRow from './Row/EditableRow';
 import Header from "./Header/Header";
+import Pagination from "./Pagination/Pagination";
 import "./table.scss";
 
 const Table = ({ data, headers, pageSize }) => {
   const [tableData, setTableData] = useState(data);
   const [selectedRowForEdit, setSelectedRowForEdit] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * pageSize;
+    const lastPageIndex = firstPageIndex + pageSize;
+    return tableData.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, tableData, pageSize]);
+
 
   const handleRowEdit = (event) => {
     const fieldName = event.target.getAttribute("name");
@@ -43,7 +52,7 @@ const Table = ({ data, headers, pageSize }) => {
       <table>
         <Header headers={headers} />
         <tbody>
-          {tableData?.map((row, index) => (
+          {currentTableData?.map((row, index) => (
             <tr key={index}>
               {selectedRowForEdit?.id === row?.id ? (
                 <EditableRow selectedRowForEdit={selectedRowForEdit} handleRowEdit={handleRowEdit} handleCancel={handleCancel} handleSave={handleRowSave} />
@@ -54,6 +63,13 @@ const Table = ({ data, headers, pageSize }) => {
           ))}
         </tbody>
       </table>
+      <Pagination
+        className="pagination-bar"
+        currentPage={currentPage}
+        totalCount={data?.length}
+        pageSize={pageSize}
+        onPageChange={page => setCurrentPage(page)}
+      />
     </>
   );
 };
