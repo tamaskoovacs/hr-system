@@ -13,6 +13,10 @@ tr {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    button:nth-child(1) {
+      margin-right: 10px;
+    }
   }
   
   @media screen and (max-width: 800px) {
