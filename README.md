@@ -19,5 +19,5 @@ Format the entire application with prettier.
 ### `npm test`
 Launches the test runner in the interactive watch mode.
 
-### `npm test -- --coverage`
+### `npm run coverage`
 For coverage report

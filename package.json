@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier-format": "prettier --config .prettierrc 'src' --write"
+    "prettier-format": "prettier --config .prettierrc 'src' --write",
+    "coverage": "npm test -- --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +58,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
-      "!src/index.tsx"
+      "!src/index.tsx",
+      "!src/App.tsx",
+      "!src/**/routes.tsx",
+      "!src/**/interfaces.ts"
     ],
     "coverageThreshold": {
       "global": {
