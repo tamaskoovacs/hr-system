@@ -53,5 +53,19 @@
     "sass": "^1.52.3",
     "sass-loader": "^13.0.0",
     "tsconfig-paths": "^4.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "functions": 90,
+        "branches": 90,
+        "statements": 90
+      }
+    }
   }
 }
