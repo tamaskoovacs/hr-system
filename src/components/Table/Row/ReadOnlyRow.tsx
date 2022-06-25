@@ -11,10 +11,10 @@ const ReadOnlyRow: React.FC<ReadOnlyRowProps> = ({ row, headers, handleEditClick
         </td>
       ))}
       <td>
-        <button type="button" onClick={() => handleEditClick(row)}>
+        <button type="button" data-testid={`read-only-row-edit-bt-${row.id}`} onClick={() => handleEditClick(row)}>
           {'Edit'}
         </button>
-        <button type="button" onClick={() => handleDeleteClick(row?.id)}>
+        <button type="button" data-testid={`read-only-row-delete-bt-${row.id}`} onClick={() => handleDeleteClick(row?.id)}>
           {'Delete'}
         </button>
       </td>

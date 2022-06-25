@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component It should matches snapshot 1`] = `
+<div>
+  <ul
+    class="pagination-container pagination-bar"
+  >
+    <li
+      class="pagination-item disabled"
+      data-testid="left-arrow-li"
+    >
+      <div
+        class="arrow left"
+      />
+    </li>
+    <li
+      class="pagination-item selected"
+      data-testid="pagination-li-1"
+    >
+      1
+    </li>
+    <li
+      class="pagination-item"
+      data-testid="pagination-li-2"
+    >
+      2
+    </li>
+    <li
+      class="pagination-item"
+      data-testid="right-arrow-li"
+    >
+      <div
+        class="arrow right"
+      />
+    </li>
+  </ul>
+</div>
+`;

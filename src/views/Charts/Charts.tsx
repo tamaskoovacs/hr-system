@@ -3,8 +3,8 @@ import { Bar } from 'react-chartjs-2';
 import calcAvgSalaryPerIndustry from './avgSalaryPerIndustrySelector';
 import calcAvgSalaryPerExper from './avgSalaryPerExperSelector';
 import calcAvgYearPerIndustry from './avgYearPerIndustry';
-import './charts.scss';
 import { useNavigate } from 'react-router-dom';
+import './charts.scss';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 

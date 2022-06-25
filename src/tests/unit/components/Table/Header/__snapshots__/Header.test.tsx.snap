@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component It should matches snapshot 1`] = `
+<div>
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Email
+      </th>
+      <th>
+        Date of birth
+      </th>
+      <th>
+        Industry
+      </th>
+      <th>
+        Salary
+      </th>
+      <th>
+        Years of experience
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+</div>
+`;

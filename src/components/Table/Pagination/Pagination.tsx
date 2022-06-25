@@ -29,7 +29,11 @@ const Pagination: React.FC<PaginationProps> = ({
   let lastPage = paginationRange?.[paginationRange?.length - 1];
   return (
     <ul className={classnames('pagination-container', { [className]: className })}>
-      <li className={classnames('pagination-item', { disabled: currentPage === 1 })} onClick={onPrevious}>
+      <li
+        className={classnames('pagination-item', { disabled: currentPage === 1 })}
+        onClick={onPrevious}
+        data-testid="left-arrow-li"
+      >
         <div className="arrow left" />
       </li>
       {paginationRange?.map((pageNumber, index) => {
@@ -48,6 +52,7 @@ const Pagination: React.FC<PaginationProps> = ({
             })}
             onClick={() => onPageChange(pageNumber)}
             key={index}
+            data-testid={`pagination-li-${index + 1}`}
           >
             {pageNumber}
           </li>
@@ -58,6 +63,7 @@ const Pagination: React.FC<PaginationProps> = ({
           disabled: currentPage === lastPage
         })}
         onClick={onNext}
+        data-testid="right-arrow-li"
       >
         <div className="arrow right" />
       </li>

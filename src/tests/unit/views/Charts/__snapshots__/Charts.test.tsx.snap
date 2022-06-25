@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Charts page It should matches snapshot 1`] = `
+<div>
+  <div
+    class="chart-container"
+  >
+    <div
+      class="top-section"
+    >
+      <h1>
+        Charts
+      </h1>
+      <button>
+        Hr System Board
+      </button>
+    </div>
+    <canvas
+      height="150"
+      role="img"
+      width="300"
+    />
+    <canvas
+      height="150"
+      role="img"
+      width="300"
+    />
+    <canvas
+      height="150"
+      role="img"
+      width="300"
+    />
+  </div>
+</div>
+`;

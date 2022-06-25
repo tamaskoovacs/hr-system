@@ -7,12 +7,25 @@ const EditableRow: React.FC<EditableRowProps> = ({ selectedRowForEdit, handleRow
     <>
       {Object?.entries(selectedRowForEdit)?.map(([key, value], index) => (
         <td key={index}>
-          <input type="text" required name={key} value={value ?? ''} onChange={handleRowEdit}></input>
+          {key === 'id' ? (
+            <>{value}</>
+          ) : (
+            <input
+              type="text"
+              required
+              name={key}
+              value={value ?? ''}
+              onChange={handleRowEdit}
+              data-testid={`edit-row-input-${index}-${selectedRowForEdit.id}`}
+            ></input>
+          )}
         </td>
       ))}
       <td>
-        <button type="submit">Save</button>
-        <button type="button" onClick={handleCancel}>
+        <button type="submit" data-testid={`edit-row-save-bt-${selectedRowForEdit.id}`}>
+          Save
+        </button>
+        <button type="button" data-testid={`edit-row-cancel-bt-${selectedRowForEdit.id}`} onClick={handleCancel}>
           Cancel
         </button>
       </td>

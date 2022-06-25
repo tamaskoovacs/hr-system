@@ -14,12 +14,12 @@ const HrSystemBoard: React.FC = () => {
         <h1>Hr System Board</h1>
         <button onClick={handleChartsClick}>Charts</button>
       </div>
-      <Table data={tableData} headers={tableHeaders} pageSize={20} />
+      <Table data={tableData} headers={headers} pageSize={20} />
     </>
   );
 };
 
-const tableHeaders = [
+const headers = [
   'Id',
   'First Name',
   'Last Name',

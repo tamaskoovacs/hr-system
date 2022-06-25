@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component It should matches snapshot 1`] = `
+<div>
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Email
+      </th>
+      <th>
+        Date of birth
+      </th>
+      <th>
+        Industry
+      </th>
+      <th>
+        Salary
+      </th>
+      <th>
+        Years of experience
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+</div>
+`;
+
+exports[`ReadOnlyRow component It should matches snapshot 1`] = `
+<div>
+  <td
+    data-label="Id"
+  >
+    1
+  </td>
+  <td
+    data-label="First Name"
+  >
+    Ewen
+  </td>
+  <td
+    data-label="Last Name"
+  />
+  <td
+    data-label="Email"
+  >
+    emclewd1@bbb.org
+  </td>
+  <td
+    data-label="Date of birth"
+  >
+    15/12/1991
+  </td>
+  <td
+    data-label="Industry"
+  >
+    Telecommunications Equipment
+  </td>
+  <td
+    data-label="Salary"
+  >
+    144392.9
+  </td>
+  <td
+    data-label="Years of experience"
+  >
+    2.8
+  </td>
+  <td>
+    <button
+      data-testid="read-only-row-edit-bt-1"
+      type="button"
+    >
+      Edit
+    </button>
+    <button
+      data-testid="read-only-row-delete-bt-1"
+      type="button"
+    >
+      Delete
+    </button>
+  </td>
+</div>
+`;
